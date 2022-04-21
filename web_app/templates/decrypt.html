@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<a href="/">Назад</a>
+<form action="" method="post">
+    <p>
+        <label for="message">Cообщение</label>
+        <input type="text" name="message">
+    </p>
+    <p>
+        <label for="step">Шаг Шифра</label>
+        <input type="number" name="step">
+    </p>
+    <input type="submit" name="send" value="Расшифровать">
+</form>
+<p>
+    Результат : {{caesar}}
+</p>
+{% endblock %}
