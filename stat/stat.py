@@ -4,4 +4,6 @@ experiments_data = pandas.read_csv("experiments.csv")
 df11 = pandas.DataFrame(data ={
     'df1': pandas.read_csv("experiments.csv")['experiments']
     })
-print(stats.kstest(df11['df1'],'norm'))
+
+print(stats.kstest(df11['df1'],'norm',(df11['df1'].mean(),
+    df11['df1'].std())))
